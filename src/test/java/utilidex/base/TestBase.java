@@ -35,7 +35,7 @@ public class TestBase {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
+
 			try {
 				config.load(fis);
 			} catch (IOException e) {
@@ -50,6 +50,7 @@ public class TestBase {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+
 			try {
 				OR.load(fis);
 			} catch (IOException e) {
@@ -67,15 +68,16 @@ public class TestBase {
 
 			driver.get(config.getProperty("siteurl"));
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implicit.wait")),TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implicit.wait")),
+					TimeUnit.SECONDS);
 		}
 	}
-	
+
 	public boolean isElementPresent(By by) {
 		try {
 			driver.findElement(by);
 			return true;
-		}catch(NoSuchElementException e) {
+		} catch (NoSuchElementException e) {
 			return false;
 		}
 	}
