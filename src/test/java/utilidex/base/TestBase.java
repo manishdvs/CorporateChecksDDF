@@ -35,6 +35,7 @@ public class TestBase {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			
 			try {
 				config.load(fis);
 			} catch (IOException e) {
